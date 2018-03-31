@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeskivSharp05", "LeskivSharp05\LeskivSharp05.csproj", "{BFC33DAD-C5B9-470F-A5C0-919A237688EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFC33DAD-C5B9-470F-A5C0-919A237688EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC33DAD-C5B9-470F-A5C0-919A237688EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC33DAD-C5B9-470F-A5C0-919A237688EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC33DAD-C5B9-470F-A5C0-919A237688EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7783B5F-5B58-4905-A880-69DADD9D3043}
+	EndGlobalSection
+EndGlobal
