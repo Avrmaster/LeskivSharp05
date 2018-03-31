@@ -1,0 +1,38 @@
+﻿<Window x:Class="LeskivSharp05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LeskivSharp05"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="648" Width="900">
+    <Grid>
+        <ScrollViewer Grid.Column="0" Background="Transparent" HorizontalScrollBarVisibility="Auto">
+            <DataGrid x:Name="ProcessesDataGrid"
+                      HorizontalGridLinesBrush="DarkGray"
+                      Background="Transparent" RowBackground="#5FFFFFFF"
+                      CanUserSortColumns="True" IsReadOnly="True"
+                      AutoGenerateColumns="False" ItemsSource="{Binding ProcessesList, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedItem="{Binding SelectedProcess, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" />
+                    <DataGridTextColumn Header="ID" Binding="{Binding Path=Id}" />
+                    <DataGridTextColumn Header="Active" Binding="{Binding Path=IsActive}" />
+                    <DataGridTextColumn Header="CPU usage" Binding="{Binding Path=CPU}" />
+                    <DataGridTextColumn Header="Memory usage" Binding="{Binding Path=MEM}" />
+                    <DataGridTextColumn Header="Threads count" Binding="{Binding Path=ThreadsCnt}" />
+                    <DataGridTextColumn Header="User" Binding="{Binding Path=User}" />
+                    <DataGridTextColumn Header="Path" Binding="{Binding Path=Path}" />
+                    <DataGridTextColumn Header="Active since" Binding="{Binding Path=LaunchDateTime}" />
+                </DataGrid.Columns>
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="0" Background="BlanchedAlmond" Padding="10">
+                            
+                        </Border>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
+            </DataGrid>
+        </ScrollViewer>
+    </Grid>
+</Window>
