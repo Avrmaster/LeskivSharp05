@@ -12,7 +12,8 @@
                       HorizontalGridLinesBrush="DarkGray"
                       Background="Transparent" RowBackground="#5FFFFFFF"
                       CanUserSortColumns="True" IsReadOnly="True"
-                      AutoGenerateColumns="False" ItemsSource="{Binding ProcessesList, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                      AutoGenerateColumns="False"
+                      ItemsSource="{Binding ProcessesList, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
                       SelectedItem="{Binding SelectedProcess, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" />
@@ -28,7 +29,34 @@
                 <DataGrid.RowDetailsTemplate>
                     <DataTemplate>
                         <Border BorderThickness="0" Background="BlanchedAlmond" Padding="10">
-                            
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row ="0" Foreground="#5F68F2"
+                                           TextWrapping="Wrap" Background="#15ffffff" FontStyle="Italic"
+                                           TextAlignment="Left" FontSize="16" Margin="10" Text="Modules"/>
+
+                                <DataGrid x:Name="ProcessModules" Grid.Row="1"
+                                          CanUserSortColumns="True" IsReadOnly="True"
+                                          AutoGenerateColumns="True"
+                                          ItemsSource="{Binding Path=Modules, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+                                </DataGrid>
+
+                                <TextBlock Grid.Row ="2" Foreground="#5F68F2"
+                                           TextWrapping="Wrap" Background="#15ffffff" FontStyle="Italic"
+                                           TextAlignment="Left" FontSize="16" Margin="10" Text="Threads"/>
+
+                                <DataGrid x:Name="ProcessThreads" Grid.Row="3"
+                                          CanUserSortColumns="True" IsReadOnly="True"
+                                          AutoGenerateColumns="True"
+                                          ItemsSource="{Binding Path=Threads, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+                                </DataGrid>
+                            </Grid>
                         </Border>
                     </DataTemplate>
                 </DataGrid.RowDetailsTemplate>

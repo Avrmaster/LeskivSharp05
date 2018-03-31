@@ -23,9 +23,9 @@ namespace LeskivSharp05
             }
             
             
+
         }
-
-
+        
         #region Implementation
 
         public event PropertyChangedEventHandler PropertyChanged;
